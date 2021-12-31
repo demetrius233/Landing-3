@@ -1,0 +1,23 @@
+.particulas {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  background-color: white;
+  animation: animate linear infinite;
+  box-shadow: 0 0 5px 1px white;
+
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    10%,
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  }
+}

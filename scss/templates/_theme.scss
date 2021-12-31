@@ -1,0 +1,84 @@
+.theme {
+  position: relative;
+  background-image: url(../../assets/img/back_song_visual_s.jpg);
+  background-size: cover;
+  padding: 3rem 0;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-image: url(../../assets/img/main_bg_before.png);
+    background-repeat: repeat-x;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 6rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .container-theme {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 1440px) {
+      width: 70%;
+      margin: auto;
+    }
+
+    @media (min-width: 968px) {
+      display: flex;
+    }
+  }
+
+  .theme-song {
+    position: relative;
+    width: max-content;
+    margin: auto;
+
+    @media (min-width: 968px) {
+      margin: 0;
+    }
+
+    p {
+      width: 500px;
+      color: white;
+      position: relative;
+      padding: 9rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      //   padding: 120%;
+      background-image: url(../../assets/img/back_theme_text.svg);
+      background-repeat: no-repeat;
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .theme-video {
+    @media (min-width: 968px) {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      margin-left: -4rem;
+      margin-top: 9rem;
+      width: 100%;
+    }
+  }
+}

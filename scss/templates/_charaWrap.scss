@@ -1,0 +1,224 @@
+.chara-wrap {
+  position: relative;
+  height: 70vh;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-image: url(../../assets/img/main_bg_before.png);
+    background-repeat: repeat-x;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (max-width: 1220px) {
+    height: 260vh;
+  }
+  //   background-color: tomato;
+
+  .content-wrap {
+    display: flex;
+    height: 100%;
+
+    @media (max-width: 1220px) {
+      flex-direction: column;
+    }
+
+    & > a:nth-child(1) {
+      background-image: url(../../assets/img/img_saber.png);
+    }
+    & > a:nth-child(2) {
+      background-image: url(../../assets/img/img_archer.png);
+    }
+    & > a:nth-child(3) {
+      background-image: url(../../assets/img/img_lancer.png);
+    }
+    & > a:nth-child(4) {
+      background-image: url(../../assets/img/img_rider.png);
+    }
+    & > a:nth-child(5) {
+      background-image: url(../../assets/img/img_caster.png);
+    }
+    & > a:nth-child(6) {
+      background-image: url(../../assets/img/img_assassin.png);
+    }
+    & > a:nth-child(7) {
+      background-image: url(../../assets/img/img_berserker.png);
+    }
+    & > a:nth-child(8) {
+      background-image: url(../../assets/img/img_extra.png);
+    }
+
+    & > a {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position-x: -500px, center;
+      background-size: 1200px, 300px;
+      overflow: hidden;
+
+      flex: 1;
+      transition: flex 0.3s;
+
+      @media (max-width: 1220px) {
+        background-position-x: center;
+        background-size: 450px, 300px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#0f2d6e, 0.9);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center 70%;
+
+        @media (max-width: 1220px) {
+          //   transform: rotate(-90deg);
+        }
+      }
+
+      &:nth-child(1)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_saber.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_saber.png);
+      }
+      &:nth-child(2)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_archer.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_archer.png);
+      }
+      &:nth-child(3)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_lancer.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_lancer.png);
+      }
+
+      &:nth-child(4)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_rider.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_rider.png);
+      }
+
+      &:nth-child(5)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_caster.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_caster.png);
+      }
+
+      &:nth-child(6)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_assassin.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_assassin.png);
+      }
+
+      &:nth-child(7)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_berserker.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_berserker.png);
+      }
+
+      &:nth-child(8)::before {
+        @media (max-width: 1220px) {
+          background-image: url(../../assets/img/off/class_extra.png);
+          background-size: 80px;
+        }
+
+        background-image: url(../../assets/img/class_extra.png);
+      }
+    }
+
+    & > a:hover {
+      flex: 3;
+    }
+
+    & > a:hover div {
+      left: 0;
+    }
+
+    & > a div {
+      position: absolute;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: #376bdb;
+      background-position-x: -290px, center, left;
+      background-repeat: no-repeat;
+      background-size: 1000px, 500px, 40px;
+      transition: left 0.4s;
+
+      @media (max-width: 1220px) {
+        background-position-x: center, center, left;
+        background-size: 430px, 300px, 20px;
+      }
+    }
+
+    & > a:nth-child(1) div {
+      background-image: url(../../assets/img/img_saber.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_saber.png);
+    }
+    & > a:nth-child(2) div {
+      background-image: url(../../assets/img/img_archer.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_archer.png);
+    }
+    & > a:nth-child(3) div {
+      background-image: url(../../assets/img/img_lancer.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_lancer.png);
+    }
+    & > a:nth-child(4) div {
+      background-image: url(../../assets/img/img_rider.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_rider.png);
+    }
+    & > a:nth-child(5) div {
+      background-image: url(../../assets/img/img_caster.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_caster.png);
+    }
+    & > a:nth-child(6) div {
+      background-image: url(../../assets/img/img_assassin.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_assassin.png);
+    }
+    & > a:nth-child(7) div {
+      background-image: url(../../assets/img/img_berserker.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_berserker.png);
+    }
+    & > a:nth-child(8) div {
+      background-position-x: -205px, center, left;
+      background-image: url(../../assets/img/img_extra.png),
+        url(../../assets/img/bg_emblem.png),
+        url(../../assets/img/class_extra.png);
+    }
+  }
+}

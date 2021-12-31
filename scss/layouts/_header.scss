@@ -1,0 +1,109 @@
+header {
+  background-color: #101010;
+  border-bottom: 2px solid #d6197d;
+}
+
+$altoHeader: 60px;
+
+.container-header {
+  height: $altoHeader;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    // width: 150px;
+    width: 140px;
+  }
+
+  .navegacion {
+    transform: translateY(-100px) scale(1, 0);
+    transform-origin: center top;
+    position: fixed;
+    top: 61px;
+    left: 0;
+    width: 100%;
+    background-color: gray;
+    height: calc(100% - 4rem);
+    text-align: center;
+    transition: transform 0.4s;
+    z-index: 10;
+
+    @media (min-width: 1222px) {
+      display: flex;
+      position: static;
+      transform: translateY(0) scale(1);
+      height: unset;
+      width: auto;
+      background-color: unset;
+    }
+
+    li {
+      padding: 1.2rem;
+      border-bottom: 1px solid white;
+
+      @media (min-width: 1222px) {
+        border: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      a {
+        color: white;
+        font-size: 1.3rem;
+      }
+
+      a {
+        @media (min-width: 1222px) {
+          height: $altoHeader;
+          display: flex;
+          align-items: center;
+          padding: 0 3rem;
+
+          &:hover {
+            background-color: #d6197d;
+          }
+        }
+      }
+    }
+
+    &.active {
+      transform: translateY(0) scale(1, 1);
+    }
+  }
+
+  .redes {
+    display: flex;
+    align-items: center;
+
+    .links-sociales {
+      display: none;
+
+      a {
+        padding: 2px;
+        width: 38px;
+        height: 38px;
+        max-width: 40px;
+        max-height: 40px;
+        display: inline-block;
+        text-align: center;
+        // line-height: 40px;
+      }
+
+      @media (min-width: 1222px) {
+        display: flex;
+      }
+    }
+
+    .idioma {
+      background-color: #d6197d;
+      height: $altoHeader;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+      margin-left: 15px;
+      color: white;
+    }
+  }
+}

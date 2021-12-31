@@ -1,0 +1,148 @@
+.content-action {
+  //   height: 584px;
+  background-image: url(../../assets/img/bg.jpg);
+  background-size: cover;
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-image: url(../../assets/img/main_bg_before.png);
+    background-repeat: repeat-x;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-image: url(../../assets/img/main_bg_before.png);
+    background-repeat: repeat-x;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (max-width: 1220px) {
+    padding: 6rem 2rem;
+  }
+
+  .slide {
+    @media (min-width: 1440px) {
+      width: 65%;
+      margin: auto;
+      margin-left: 10%;
+    }
+  }
+}
+
+.content-action-header {
+  display: flex;
+  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (min-width: 1220px) {
+    justify-content: space-between;
+  }
+}
+
+.arrows {
+  @media (max-width: 1220px) {
+    display: flex;
+  }
+
+  span {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #132181;
+    transform: skewX(-18deg);
+  }
+}
+
+.content-action-body .tab {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1220px) {
+    flex-direction: row;
+  }
+
+  .tabNav li {
+    cursor: pointer;
+
+    @media (min-width: 1220px) {
+      position: relative;
+      z-index: 10;
+      height: 110px;
+
+      &:nth-child(1) {
+        left: 40px;
+      }
+      &:nth-child(2) {
+        left: 75px;
+      }
+      &:nth-child(3) {
+        left: 35px;
+      }
+      &:nth-child(4) {
+        left: 140px;
+      }
+    }
+  }
+
+  .tabCon {
+    position: relative;
+    padding: 0.5rem;
+    background: black;
+    box-shadow: 0 0 0 4px #b5b5b5;
+
+    li.effect {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        opacity: 0;
+        width: 100%;
+      }
+    }
+
+    ul {
+      position: absolute;
+      width: 930px;
+      right: -96%;
+      top: -60px;
+      display: none;
+
+      @media (min-width: 1220px) {
+        display: block;
+      }
+    }
+  }
+}
+.animateIn {
+  animation: animateIn 0.4s forwards;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

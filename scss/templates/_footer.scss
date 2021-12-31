@@ -1,0 +1,63 @@
+footer {
+  background-size: cover;
+  background-image: url(../../assets/img/footer_bg.jpg);
+  padding: 2rem;
+  text-align: center;
+
+  @media (min-width: 968px) {
+    padding: 6rem;
+  }
+
+  .spec {
+    margin-bottom: 2rem;
+    @media (min-width: 1440px) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .dl-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+
+    @media (min-width: 1440px) {
+      width: 75%;
+      justify-content: center;
+    }
+
+    a {
+      //   background-color: salmon;
+      //   border: 1px solid;
+      width: 272px;
+      height: 76px;
+      background-size: 276px 76px;
+      background-position: center;
+      margin: 10px;
+
+      @media (min-width: 1440px) {
+        margin: 10px;
+      }
+
+      @media (max-width: 968px) {
+        margin: 10px 0;
+      }
+
+      &:nth-child(1) {
+        background-image: url(../../assets/img/f_app_btn.png);
+      }
+      &:nth-child(2) {
+        background-image: url(../../assets/img/f_google_btn.png);
+      }
+      &:nth-child(3) {
+        background-image: url(../../assets/img/f_dmm_btn.png);
+      }
+      &:nth-child(4) {
+        background-image: url(../../assets/img/f_twitter_btn.png);
+        background-size: cover;
+        background-position: top;
+        height: 78px;
+      }
+    }
+  }
+}
