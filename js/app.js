@@ -46,7 +46,6 @@ hero.addEventListener("mouseover", (e) => {
       e.clientY / 5 - 100
     }px)`;
   });
-  console.log(e);
 });
 
 const actionAnimationsmouseOver = () => {
