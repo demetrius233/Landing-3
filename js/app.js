@@ -36,9 +36,9 @@ const renderStars = (element) => {
   }
 };
 
-/* renderStars(hero);
+renderStars(hero);
 renderStars(contentAction);
-renderStars(theme); */
+renderStars(theme);
 
 hero.addEventListener("mouseover", (e) => {
   imageMove.map((img) => {
