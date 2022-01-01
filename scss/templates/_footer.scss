@@ -61,3 +61,47 @@ footer {
     }
   }
 }
+
+.gumi {
+  @media (max-width: 968px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  border-top: 1px solid #ddbf4b;
+  background-color: #000;
+  font-size: 0.7rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 2rem 0;
+  font-family: sans-serif;
+
+  @media (min-width: 1220px) {
+    justify-content: space-around;
+  }
+
+  p.v-pc {
+    font-size: 10px;
+  }
+
+  ul {
+    display: flex;
+
+    li a {
+      color: white;
+      margin: 0 3px;
+
+      &::before {
+        content: url(../assets/img/footer_icon8c05.png?1600932034);
+        position: relative;
+        margin-right: 5px;
+      }
+    }
+  }
+}

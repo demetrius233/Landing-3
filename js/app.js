@@ -4,11 +4,11 @@ const contentAction = document.querySelector(".content-action");
 const theme = document.querySelector(".theme");
 const btnBurger = document.querySelector(".menu-burger");
 
-btnBurger.addEventListener("click", (e) => {
+/* btnBurger.addEventListener("click", (e) => {
   e.preventDefault();
 
   document.querySelector(".navegacion").classList.toggle("active");
-});
+}); */
 
 const imageAction = [...document.querySelectorAll(".imageAction")];
 const imageMove = [...document.querySelectorAll(".img-move")];
@@ -41,18 +41,36 @@ renderStars(contentAction);
 renderStars(theme);
 
 hero.addEventListener("mouseover", (e) => {
-  imageMove.map((img) => {
+  /* imageMove.map((img) => {
     img.style.transform = `translateX(${e.clientX / 8 - 100}px) translateY(${
       e.clientY / 5 - 100
     }px)`;
+  }); */
+
+  imageMove.map((img) => {
+    let x = img.getBoundingClientRect().left + img.clientWidth / 2;
+    let y = img.getBoundingClientRect().top + img.clientHeight / 2;
+    let radian = Math.atan2(event.pageX - x, event.pageY - y);
+    let rot = radian * (180 / Math.PI) * -1 + 90;
+    img.style.transform = `translateX(${rot - 100}px)`;
+    // img.style.transform = `translateY(${y}px)`;
+
+    /* let x = e.offsetX / 2;
+    let y = e.offsetY / 2;
+    img.style.left = `${x}px`;
+    img.style.top = `${y}px`; */
+
+    /*  let x = e.offsetX / 2 - 350;
+    let y = e.offsetY / 2 - 200;
+    img.style.transform = `translateX(${x}px) translateY(${y}px)`; */
   });
 });
 
 const actionAnimationsmouseOver = () => {
-  const btnTapOff = document.querySelector(".btnTapOff img");
-  const btnSlideOff = document.querySelector(".btnSlideOff img");
-  const btnChargeOff = document.querySelector(".btnChargeOff img");
-  const btnDashOff = document.querySelector(".btnDashOff img");
+  const btnTapOff = document.querySelector(".btnTapOff");
+  const btnSlideOff = document.querySelector(".btnSlideOff");
+  const btnChargeOff = document.querySelector(".btnChargeOff");
+  const btnDashOff = document.querySelector(".btnDashOff");
 
   const btnTap = document.querySelector(".btnTap img");
   const btnSlide = document.querySelector(".btnSlide img");
@@ -72,8 +90,6 @@ const actionAnimationsmouseOver = () => {
   });
 
   btnSlideOff.addEventListener("mouseover", () => {
-    btnSlideOff.setAttribute("src", "./assets/img/btn-slide-on.png");
-
     imageAction.forEach((img) => {
       img.classList.remove("animateIn");
     });
@@ -82,8 +98,6 @@ const actionAnimationsmouseOver = () => {
   });
 
   btnChargeOff.addEventListener("mouseover", () => {
-    btnChargeOff.setAttribute("src", "./assets/img/btn-charge-on.png");
-
     imageAction.forEach((img) => {
       img.classList.remove("animateIn");
     });
@@ -92,8 +106,6 @@ const actionAnimationsmouseOver = () => {
   });
 
   btnDashOff.addEventListener("mouseover", () => {
-    btnDashOff.setAttribute("src", "./assets/img/btn-dash-on.png");
-
     imageAction.forEach((img) => {
       img.classList.remove("animateIn");
     });
@@ -103,10 +115,10 @@ const actionAnimationsmouseOver = () => {
 };
 
 const actionAnimationsmouseLeave = () => {
-  const btnTapOff = document.querySelector(".btnTapOff img");
-  const btnSlideOff = document.querySelector(".btnSlideOff img");
-  const btnChargeOff = document.querySelector(".btnChargeOff img");
-  const btnDashOff = document.querySelector(".btnDashOff img");
+  const btnTapOff = document.querySelector(".btnTapOff");
+  const btnSlideOff = document.querySelector(".btnSlideOff");
+  const btnChargeOff = document.querySelector(".btnChargeOff");
+  const btnDashOff = document.querySelector(".btnDashOff");
 
   btnTapOff.addEventListener("mouseout", () => {
     btnTapOff.setAttribute("src", "./assets/img/btn-tap-off.png");
@@ -127,3 +139,5 @@ const actionAnimationsmouseLeave = () => {
 
 actionAnimationsmouseOver();
 actionAnimationsmouseLeave();
+
+document.getElementById("fecha").innerHTML = new Date().getFullYear();

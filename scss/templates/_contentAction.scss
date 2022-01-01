@@ -79,22 +79,89 @@
 
   .tabNav li {
     cursor: pointer;
+    position: relative;
+    width: 282px;
+    height: 133px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:nth-child(1)::before {
+      background: url(../assets/img/btn-tap-off.png) no-repeat;
+    }
+
+    &:nth-child(2)::before {
+      background: url(../assets/img/btn-slide-off.png) no-repeat;
+    }
+
+    &:nth-child(3)::before {
+      background: url(../assets/img/btn-charge-off.png) no-repeat;
+    }
+
+    &:nth-child(4)::before {
+      background: url(../assets/img/btn-dash-off.png) no-repeat;
+    }
+
+    /* AFTER  */
+    &::after {
+      opacity: 0;
+      transition: 1.3s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+    &:nth-child(1)::after {
+      background: url(../assets/img/btn-tap-on.png) no-repeat;
+    }
+
+    &:nth-child(2)::after {
+      background: url(../assets/img/btn-slide-on.png) no-repeat;
+    }
+
+    &:nth-child(3)::after {
+      background: url(../assets/img/btn-charge-on.png) no-repeat;
+    }
+
+    &:nth-child(4)::after {
+      background: url(../assets/img/btn-dash-on.png) no-repeat;
+    }
 
     @media (min-width: 1220px) {
       position: relative;
       z-index: 10;
       height: 110px;
 
-      &:nth-child(1) {
+      &:nth-child(1)::before {
         left: 40px;
       }
-      &:nth-child(2) {
+      &:nth-child(2)::before {
         left: 75px;
       }
-      &:nth-child(3) {
+      &:nth-child(3)::before {
         left: 35px;
       }
-      &:nth-child(4) {
+      &:nth-child(4)::before {
+        left: 140px;
+      }
+
+      &:nth-child(1)::after {
+        left: 40px;
+      }
+      &:nth-child(2)::after {
+        left: 75px;
+      }
+      &:nth-child(3)::after {
+        left: 35px;
+      }
+      &:nth-child(4)::after {
         left: 140px;
       }
     }

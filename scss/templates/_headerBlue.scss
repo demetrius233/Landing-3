@@ -1,0 +1,82 @@
+header {
+  background: url(../assets/img/bg-header.png);
+  border-bottom: 1px solid #030f26;
+  border-top: 2px solid #bbbaaa;
+  height: 77px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+
+  nav li {
+    float: left;
+    height: 77px;
+    position: relative;
+    width: 242px;
+
+    a {
+      display: block;
+      height: 77px;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      width: 100%;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        height: 77px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 242px;
+        z-index: -1;
+      }
+    }
+  }
+
+  nav li:nth-child(1) a::before {
+    background: url(../assets/img/header-top-off.png) no-repeat;
+  }
+
+  nav li:nth-child(2) a::before {
+    background: url(../assets/img/header-action-off.png) no-repeat;
+  }
+
+  nav li:nth-child(3) a::before {
+    background: url(../assets/img/header-character-off.png) no-repeat;
+  }
+
+  nav li:nth-child(4) a::before {
+    background: url(../assets/img/header-play-off.png) no-repeat;
+  }
+
+  /* AFTER A  */
+  nav li a::after {
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  nav li:hover a::after {
+    opacity: 1;
+  }
+
+  nav li:nth-child(1) a::after {
+    background: url(../assets/img/header-top-on.png) no-repeat;
+  }
+
+  nav li:nth-child(2) a::after {
+    background: url(../assets/img/header-action-on.png) no-repeat;
+  }
+
+  nav li:nth-child(3) a::after {
+    background: url(../assets/img/header-character-on.png) no-repeat;
+  }
+
+  nav li:nth-child(4) a::after {
+    background: url(../assets/img/header-play-on.png) no-repeat;
+  }
+}

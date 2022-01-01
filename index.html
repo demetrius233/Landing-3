@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,9 +20,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/App.css" />
+    <link rel="stylesheet" href="scss/App.css" />
   </head>
   <body>
+    <!--
     <header>
       <div class="container-header ms-auto">
         <a href="" class="logo">
@@ -65,6 +66,42 @@
           <a href="#" class="idioma"> Language </a>
         </div>
       </div>
+    </header>
+    -->
+
+    <header>
+      <nav>
+        <ul id="nav">
+          <li data-menuanchor="top" class="active">
+            <a href="#top">トップ</a>
+          </li>
+          <li data-menuanchor="action"><a href="#action">操作説明</a></li>
+          <li data-menuanchor="character">
+            <a href="#character">キャラクター</a>
+          </li>
+          <li data-menuanchor="play"><a href="#play">モード解説</a></li>
+        </ul>
+        <!-- <p>
+          <a
+            href="http://twitter.com/share?text=今度はスマホが戦場だ！あのBLAZBLUEがスマホで登場！&amp;url=http://www.blazblue.jp/bbrr/&amp;hashtags=bbrr"
+            onclick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
+            ><img
+              src="img/nav/bn-tw.png"
+              width="36"
+              height="36"
+              alt="Twitter"
+              style="opacity: 1"
+          /></a>
+        </p>
+        <p>
+          <a
+            href="http://www.facebook.com/plugins/like.php?href=http://www.blazblue.jp/bbrr/"
+            onclick="javascript:window.open('http://www.facebook.com/plugins/like.php?href=http://www.blazblue.jp/bbrr/', null, 'width=650, height=470'); return false;"
+            rel="nofollow"
+            ><img src="img/nav/bn-fb.png" width="36" height="36" alt="Facebook"
+          /></a>
+        </p> -->
+      </nav>
     </header>
 
     <div class="hero">
@@ -122,21 +159,13 @@
         <div class="content-action-body">
           <div class="tab">
             <ul class="tabNav">
-              <li class="btnTapOff">
-                <img src="/assets/img/btn-tap-off.png" alt="" />
-              </li>
+              <li class="btnTapOff"></li>
 
-              <li class="btnSlideOff">
-                <img src="/assets/img/btn-slide-off.png" alt="" />
-              </li>
+              <li class="btnSlideOff"></li>
 
-              <li class="btnChargeOff">
-                <img src="/assets/img/btn-charge-off.png" alt="" />
-              </li>
+              <li class="btnChargeOff"></li>
 
-              <li class="btnDashOff">
-                <img src="/assets/img/btn-dash-off.png" alt="" />
-              </li>
+              <li class="btnDashOff"></li>
             </ul>
 
             <ul class="tabCon">
@@ -244,6 +273,46 @@
         <a href=""></a>
       </div>
     </footer>
+
+    <div class="gumi">
+      <ul>
+        <li><a href="#" data-tracking="official,jump,term">利用規約</a></li>
+        <li>
+          <a href="#" data-tracking="official,jump,sitepolicy"
+            >サイトポリシー</a
+          >
+        </li>
+        <li>
+          <a href="#" data-tracking="official,jump,privacypolicy"
+            >プライバシーポリシー</a
+          >
+        </li>
+        <li>
+          <a href="#" data-tracking="official,jump,violationpolicy"
+            >違反ポリシー</a
+          >
+        </li>
+        <li>
+          <a href="#" target="_blank" data-tracking="official,jump,inquiry"
+            >お問い合わせ</a
+          >
+        </li>
+        <li>
+          <a href="#" data-tracking="official,jump,behavior">対応環境</a>
+        </li>
+      </ul>
+      <p class="v-pc">
+        © <span id="fecha"></span> Orange Cube Inc./gumi Inc. All Rights
+        Reserved.
+      </p>
+      <a
+        href="#"
+        class="logo image_loaded image_loaded-s"
+        target="_blank"
+        data-tracking="official,jump,gumiofficial"
+        ><img src="./assets/img/gumi_logo8c05.png" alt=""
+      /></a>
+    </div>
   </body>
   <script src="js/app.js"></script>
 </html>

@@ -60,7 +60,7 @@
       overflow: hidden;
 
       flex: 1;
-      transition: flex 0.3s;
+      transition: flex 0.3s 0.5s, background-size 0.5s;
 
       @media (max-width: 1220px) {
         background-position-x: center;
@@ -79,7 +79,7 @@
         background-position: center 70%;
 
         @media (max-width: 1220px) {
-          //   transform: rotate(-90deg);
+          // transform: rotate(-90deg);
         }
       }
 
@@ -155,27 +155,61 @@
     }
 
     & > a:hover {
-      flex: 3;
+      background-size: 1600px;
+      background-position: center 20px;
+
+      @media (max-width: 1220px) {
+        flex: 1.2;
+      }
+
+      @media (min-width: 1220px) {
+        flex: 3;
+      }
+      // flex: 3;
     }
 
     & > a:hover div {
-      left: 0;
+      // left: 0;
+      @media (max-width: 1220px) {
+        top: 0;
+      }
+      @media (min-width: 1220px) {
+        left: 0;
+        animation: fondo 0.8s 0.6s forwards;
+
+        @keyframes fondo {
+          from {
+            background-position-x: -100%, center, left;
+          }
+          to {
+            background-position-x: -290px, center, left;
+          }
+        }
+      }
     }
 
     & > a div {
       position: absolute;
-      left: 100%;
+      // left: 100%;
       width: 100%;
       height: 100%;
       background-color: #376bdb;
       background-position-x: -290px, center, left;
       background-repeat: no-repeat;
       background-size: 1000px, 500px, 40px;
-      transition: left 0.4s;
+      transition: 0.6s 0.6s;
 
       @media (max-width: 1220px) {
         background-position-x: center, center, left;
         background-size: 430px, 300px, 20px;
+
+        left: 0;
+        top: -100%;
+      }
+
+      @media (min-width: 1220px) {
+        top: 0;
+        left: 100%;
       }
     }
 
